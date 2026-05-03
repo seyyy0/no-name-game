@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template</title>
+</head>
+<body>
+<!-- I implement the animation using basic keyframes directly inside <style> and the .piece class, as mentioned in main.kt -->
+<!-- Other than that, simple styles such as `overflow: hidden` help it not look janky -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    table {
+        overflow: hidden;
+    }
+    @keyframes dropIn {
+        from { transform: translateY(-600px); opacity: 0; }
+        to   { transform: translateY(0);      opacity: 1; }
+    }
+
+    .piece {
+        display: block;
+        animation: dropIn 0.7s ease-in;
+    }
+</style>
+<div id="root"></div>
+<script src="compose-multiplatform-html-library-template.js"></script>
+</body>
+</html>
